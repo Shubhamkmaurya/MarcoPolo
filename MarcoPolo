@@ -1,0 +1,22 @@
+import React, {useState} from "react";
+
+const Toggle =()=>{
+
+    let [myName, setMyName]=useState(true);
+
+    const ChnageName = () =>{
+        setMyName(!myName)
+    }
+    console.log(myName);
+
+    return(
+        <>
+        <div>
+            <h1 id="marco-polo">{myName? 'Marco':'Polo'}</h1>
+            <button id="marco-polo-toggler" onClick={ChnageName}>{myName? 'Polo':'Marco'}</button>
+        </div>
+        </>
+    )
+}
+
+export default Toggle;
